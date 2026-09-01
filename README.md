@@ -1,5 +1,5 @@
 # MMInject
-Credits by Jan.
+Credits by Jan (Me).
 
 # NativeAOT DLL Base:
 ```c#
