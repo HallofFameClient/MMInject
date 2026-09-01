@@ -1,4 +1,4 @@
-# MMInject
+# MMInject (BETA)
 Credits by Jan (Me).
 
 # NativeAOT DLL Base:
