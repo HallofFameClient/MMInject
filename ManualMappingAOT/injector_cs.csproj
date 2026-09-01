@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <LangVersion>latest</LangVersion>
+    <PublishAot Condition="'$(Configuration)' == 'Release'">true</PublishAot>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <Platforms>x64</Platforms>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <AssemblyName>injector</AssemblyName>
+    <RootNamespace>Injector</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Embed the DLL that will be injected. Copy cheat.dll here before build. -->
+    <EmbeddedResource Include="cheat.dll" Condition="Exists('cheat.dll')" LogicalName="cheat.dll" />
+  </ItemGroup>
+</Project>
